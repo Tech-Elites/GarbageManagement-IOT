@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/landing"
     tools:context=".LandingPage">
 
     <LinearLayout
@@ -14,7 +15,8 @@
         tools:layout_editor_absoluteX="236dp">
 
         <LinearLayout
-            android:padding="10dp"
+
+            android:paddingVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -23,7 +25,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/dustbin_clip_green" />
+                android:background="@drawable/deleteblue" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -36,7 +38,7 @@
                     android:padding="10dp"
                     android:id="@+id/textView2"
                     android:textSize="24dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textWhite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="DustBin1" />
@@ -46,14 +48,14 @@
                     android:padding="10dp"
                     android:id="@+id/textView3"
                     android:textSize="18dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textWhite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="67% Filled" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:padding="10dp"
+            android:paddingVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
@@ -62,7 +64,7 @@
                 android:id="@+id/imageView1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:background="@drawable/dustbin_clip_green"  />
+                android:background="@drawable/deleteblue"  />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,7 +77,7 @@
                     android:padding="10dp"
                     android:id="@+id/textView21"
                     android:textSize="24dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textWhite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="DustBin2" />
@@ -85,7 +87,7 @@
                     android:padding="10dp"
                     android:id="@+id/textView31"
                     android:textSize="18dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/textWhite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="98% Filled" />

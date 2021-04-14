@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/logo"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
         android:orientation="vertical">
 
         <ImageView
@@ -19,13 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@drawable/dustbin_clip_green" />
+            app:srcCompat="@drawable/dustbin_final" />
 
         <TextView
             android:fontFamily="@font/nexa_bold"
             android:id="@+id/textView"
             android:layout_gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/textWhite"
             android:textAlignment="center"
             android:textSize="40dp"
             android:layout_width="wrap_content"

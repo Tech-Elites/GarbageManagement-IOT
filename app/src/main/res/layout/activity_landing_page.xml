@@ -8,18 +8,32 @@
     tools:context=".LandingPage">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="236dp">
+        tools:layout_editor_absoluteX="236dp"
+        android:paddingHorizontal="2dp">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List of dustbins"
+            android:textColor="@color/textWhite"
+            android:textSize="40dp"
+            android:fontFamily="@font/nexa_bold"
+            android:gravity="center"/>
 
         <LinearLayout
 
             android:paddingVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/borders"
+            android:layout_marginBottom="10dp">
 
             <ImageView
                 android:id="@+id/imageView"
@@ -58,7 +72,8 @@
             android:paddingVertical="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/borders">
 
             <ImageView
                 android:id="@+id/imageView1"

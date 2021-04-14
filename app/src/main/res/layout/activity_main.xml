@@ -17,8 +17,8 @@
             android:layout_marginTop="100dp"
             android:layout_marginHorizontal="100dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="200dp"
+
             app:srcCompat="@drawable/dustbin_final" />
 
         <TextView
@@ -30,7 +30,15 @@
             android:textSize="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+
             android:text="Garbage\nManagement" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="80dp"
+            />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

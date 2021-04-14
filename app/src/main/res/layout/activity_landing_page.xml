@@ -7,6 +7,17 @@
     android:background="@drawable/landing"
     tools:context=".LandingPage">
 
+    <ProgressBar
+        android:id="@+id/progressBarListDustbin"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -26,87 +37,10 @@
             android:fontFamily="@font/nexa_bold"
             android:gravity="center"/>
 
-        <LinearLayout
-
-            android:paddingVertical="10dp"
+        <ListView
+            android:id="@+id/listViewOfDustbins"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@drawable/borders"
-            android:layout_marginBottom="10dp">
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/deleteblue" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:fontFamily="@font/nexa_bold"
-                    android:padding="10dp"
-                    android:id="@+id/textView2"
-                    android:textSize="24dp"
-                    android:textColor="@color/textWhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="DustBin1" />
-
-                <TextView
-                    android:fontFamily="@font/nexa_bold"
-                    android:padding="10dp"
-                    android:id="@+id/textView3"
-                    android:textSize="18dp"
-                    android:textColor="@color/textWhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="67% Filled" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:paddingVertical="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:background="@drawable/borders">
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/deleteblue"  />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:fontFamily="@font/nexa_bold"
-                    android:padding="10dp"
-                    android:id="@+id/textView21"
-                    android:textSize="24dp"
-                    android:textColor="@color/textWhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="DustBin2" />
-
-                <TextView
-                    android:fontFamily="@font/nexa_bold"
-                    android:padding="10dp"
-                    android:id="@+id/textView31"
-                    android:textSize="18dp"
-                    android:textColor="@color/textWhite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="98% Filled" />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

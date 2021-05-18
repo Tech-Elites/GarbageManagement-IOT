@@ -10,6 +10,24 @@ public class dustbin_info {
 
     String percentfilled;
 
+    float lat,lng;
+
+    public void setLat(float lat) {
+        this.lat = lat;
+    }
+
+    public void setLng(float lng) {
+        this.lng = lng;
+    }
+
+    public float getLat() {
+        return lat;
+    }
+
+    public float getLng() {
+        return lng;
+    }
+
     public void setDustbinname(String dustbinname) {
         this.dustbinname = dustbinname;
     }

@@ -3,11 +3,14 @@ package com.example.garbageiot;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.NumberPicker;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -29,6 +32,12 @@ public class LandingPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
         lv=findViewById(R.id.listViewOfDustbins);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                onClickOfDustbin(position);
+            }
+        });
         progressBar=findViewById(R.id.progressBarListDustbin);
         progressBar.setVisibility(View.INVISIBLE);
         fillTheList();
@@ -45,6 +54,7 @@ public class LandingPage extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren())
                 {
                     dustbin_info d= dataSnapshot.getValue(dustbin_info.class);
+
                     dustbin_infoArrayList.add(d);
                     fillTheListView();
                 }
@@ -66,6 +76,15 @@ public class LandingPage extends AppCompatActivity {
         }
         progressBar.setVisibility(View.INVISIBLE);
     }
+    void onClickOfDustbin(int index)
+    {
+        Intent intent=new Intent(this,DustbinLocation.class);
+        intent.putExtra("lat",dustbin_infoArrayList.get(index).getLat());
+        intent.putExtra("lng",dustbin_infoArrayList.get(index).getLng());
+        intent.putExtra("name",dustbin_infoArrayList.get(index).getDustbinname());
+        startActivity(intent);
+    }
+
 
 
 

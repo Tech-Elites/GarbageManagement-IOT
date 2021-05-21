@@ -1,6 +1,7 @@
 package com.example.garbageiot;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,12 @@ class custom_dustbin_arrayAdaptor extends ArrayAdapter<dustbin_info>
             TextView percentFilled=view.findViewById(R.id.percentFilled);
 
             dustbinN.setText(d.getDustbinname());
+            if(Double.parseDouble(d.percentfilled)>=90)
+                percentFilled.setTextColor(Color.parseColor("#FF0000"));
+            else
+                percentFilled.setTextColor(Color.parseColor("#EDF581"));
+
+
             percentFilled.setText(d.getPercentfilled());
         } catch (Exception e) {
             e.printStackTrace();

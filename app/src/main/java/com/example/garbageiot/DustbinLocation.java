@@ -48,5 +48,6 @@ public class DustbinLocation extends FragmentActivity implements OnMapReadyCallb
         LatLng sydney = new LatLng(lat, lng);
         mMap.addMarker(new MarkerOptions().position(sydney).title(name));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.animateCamera( CameraUpdateFactory.zoomTo( 10.0f ) );
     }
 }
